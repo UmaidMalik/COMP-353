@@ -158,6 +158,39 @@ VALUES ('98219970', 'Tobi', 'Mcgowan', '4386891110', '555 Rue Grant', 'Longueuil
 
 INSERT INTO Person(medicare_no, first_name, last_name, telephone, address, city, province, postal_code, email, citizenship, date_of_birth, age_group) 
 VALUES ('98220102', 'Kaine', 'Christensen', '5146859207', '256 Rue Rue le Baron', 'Boucherville', 'Quebec', 'J4B 2E2', 'kaine@gmail.com', 'Canadian', '1987-06-23', 6); 
+
+INSERT INTO Person (medicare_no, first_name, last_name, telephone, address, city, province, postal_code, email, citizenship, date_of_birth, age_group)
+VALUES(37048975,'Vicki','Ryan',4186406672,'1440 Boulevard Cremazie','Quebec','Quebec','G1R 1B8','Ryan316@gmail.com','Canadian','1952-05-12',5);
+
+INSERT INTO Person (medicare_no, first_name, last_name, telephone, address, city, province, postal_code, email, citizenship, date_of_birth, age_group)
+VALUES(97332106, 'Gladys','Bryant',4186832578,'2029 Saskatchewan Dr','Quebec','Quebec','S4P 3Y2','Bryant220@gmail.com','France','1985-12-22',3);
+
+INSERT INTO Person (medicare_no, first_name, last_name, telephone, address, city, province, postal_code, email, citizenship, date_of_birth, age_group)
+VALUES(10771597,'Iestyn','Burgess',4182994135,'3636 avenue de Port-Royal', 'Bonaventure', 'Quebec','G0C 1E0','Burgess540@gmail.com','Canadian','1957-01-31',6);
+
+INSERT INTO Person (medicare_no, first_name, last_name, telephone, address, city, province, postal_code, email, citizenship, date_of_birth, age_group)
+VALUES(40814003,'Annabelle','Kidd',8194699301,'4284 rue Saint-Antoine','Drummondville','Quebec','J2C 7A8','Kidd537@gmail.com','Canadian','1955-01-11',3);
+
+INSERT INTO Person (medicare_no, first_name, last_name, telephone, address, city, province, postal_code, email, citizenship, date_of_birth, age_group)
+VALUES(13379289,'Judith','Markham',8193761807,'4106 rue Saint-Édouard','Trois Rivieres','Quebec','G9A 5S8','Markham723@gmail.com','Canadian','1984-03-04',9);
+
+INSERT INTO Person (medicare_no, first_name, last_name, telephone, address, city, province, postal_code, email, citizenship, date_of_birth, age_group)
+VALUES(23954590,'Faiz','Franklin',5142508757,'2320 Duke Street','Montreal','Quebec','H3C 5K4','Franklin809@gmail.com','Canadian','1967-01-15',6);
+
+INSERT INTO Person (medicare_no, first_name, last_name, telephone, address, city, province, postal_code, email, citizenship, date_of_birth, age_group)
+VALUES(56034647,'Gertrude','Dalton',8199832462,'937 rue des Églises Est','St Andre Avellin','Quebec','J0V 1W0','Dalton928@gmail.com','American','2010-11-12',7);
+
+INSERT INTO Person (medicare_no, first_name, last_name, telephone, address, city, province, postal_code, email, citizenship, date_of_birth, age_group)
+VALUES(48850269,'Jace','Mendez',8196350626,'1618 Thurston Dr','Hull','Quebec','K1A 0C9','Mendez307@gmail.com','Canadian','1990-01-12',9);
+
+INSERT INTO Person (medicare_no, first_name, last_name, telephone, address, city, province, postal_code, email, citizenship, date_of_birth, age_group)
+VALUES(54716917,'Mina','Cannon',8198275196,'780 rue des Églises Est','Chelsea','Quebec','J0X 1N0','Cannon134@gmail.com','Canadian','2001-05-26',7);
+
+INSERT INTO Person (medicare_no, first_name, last_name, telephone, address, city, province, postal_code, email, citizenship, date_of_birth, age_group)
+VALUES(48112992,'Shelly','Martins',8194264926,'3619 rue des Églises Est','St Emile Du Suffolk','Quebec','J0V 1Y0','Martins528@gmail.com','Canadian','1994-12-15',6);
+
+INSERT INTO Person (medicare_no, first_name, last_name, telephone, address, city, province, postal_code, email, citizenship, date_of_birth, age_group)
+VALUES(45820234,'Steve','Jones',5145695369,'446 rue Le Pailleur','Montreal','Quebec','J3D 8P9','Jones@hotmail.com','Canadian','1998-08-05',4);
       
 
 
@@ -179,4 +212,121 @@ VALUES ('98219970', 1, '2021-01-11', 'Stade Olympique', 'Moderna');
 INSERT INTO Vaccination(medicare_no, dose_no, date, location_name, company) 
 VALUES ('98220102', 1, '2021-01-12', 'Stade Olympique', 'Pfizer'); 
 
+INSERT INTO Vaccination(medicare_no, dose_no, date, location_name, company)
+VALUES(37048975,1,'2020-05-31','CLSC de Motton Bay','AstraZeneca');
+
+INSERT INTO Vaccination(medicare_no, dose_no, date, location_name, company)
+VALUES(97332106,1,'2020-05-21','Université de Montréal','Moderna');
+
+INSERT INTO Vaccination(medicare_no, dose_no, date, location_name, company)
+VALUES(10771597,1,'2020-04-13','Université de Montréal','Pfizer');
+
+INSERT INTO Vaccination(medicare_no, dose_no, date, location_name, company)
+VALUES(40814003,1,'2020-04-08','Carrefour LaBaie Sept-Îles','Moderna');
+
+INSERT INTO Vaccination(medicare_no, dose_no, date, location_name, company)
+VALUES(13379289,1,'2020-05-29','Stade Olympique','AstraZeneca');
+
+INSERT INTO Vaccination(medicare_no, dose_no, date, location_name, company)
+VALUES(23954590,1,'2020-04-25','Les Basques','Pfizer');
+
+INSERT INTO Vaccination(medicare_no, dose_no, date, location_name, company)
+VALUES(10771597,2,'2020-07-11','Site de vaccination de Blainville','Moderna');
+
+INSERT INTO Vaccination(medicare_no, dose_no, date, location_name, company)
+VALUES(48850269,1,'2020-04-30','Les Basques','AstraZeneca');
+
+INSERT INTO Vaccination(medicare_no, dose_no, date, location_name, company)
+VALUES(54716917,1,'2020-05-18','Carrefour LaBaie Sept-Îles','Moderna');
+
+INSERT INTO Vaccination(medicare_no, dose_no, date, location_name, company)
+VALUES(48112992,1,'2020-04-15','CLSC de Motton Bay','Pfizer');
+
+INSERT INTO Vaccination(medicare_no, dose_no, date, location_name, company)
+VALUES(23954590,2,'2020-06-21','Stade Olympique','Moderna');
+
+INSERT INTO Vaccination(medicare_no, dose_no, date, location_name, company)
+VALUES(97332106,2,'2020-06-29','Carrefour LaBaie Sept-Îles','Pfizer');
+
+INSERT INTO Vaccination(medicare_no, dose_no, date, location_name, company)
+VALUES(40814003,2,'2020-07-09','Stade Olympique','Moderna');
+
+
+INSERT INTO Vaccine(company, status, approval_date)
+VALUES ('Pfizer', 'SAFE', '2020-12-22');
+
+INSERT INTO Vaccine(company, status, approval_date)
+VALUES('Moderna', 'SAFE', '2021-01-16');
+
+INSERT INTO Vaccine(company, status, suspension_date, approval_date)
+VALUES ('AstraZeneca', 'SUSPENDED', '2021-05-06', '2021-03-01');
+
+
+INSERT INTO Public_Health_Facility(location_name, address, `type`,website, telephone)
+VALUES('Clinique de vaccination d’Ahuntsic','800 boulevard Henri-Bourassa Ouest','Clinic','https://cdn-contenu.quebec.ca/cdn-contenu/sante/documents/Problemes_de_sante/covid-19/centres_de_vaccination_inscription_vaccins.pdf?1621543617',8195550116);
+
+INSERT INTO Public_Health_Facility (location_name, address, `type`, website, telephone)
+VALUES('Stade Olympique','4545 avenue Pierre-de-Coubertin','Special','https://cdn-contenu.quebec.ca/cdn-contenu/sante/documents/Problemes_de_sante/covid-19/centres_de_vaccination_inscription_vaccins.pdf?1621543618',4385550156);
+
+INSERT INTO Public_Health_Facility (location_name, address,`type`,website,telephone)
+VALUES('Carrefour LaBaie Sept-Îles', '391, avenue Brochu','Special','https://cdn-contenu.quebec.ca/cdn-contenu/sante/documents/Problemes_de_sante/covid-19/centres_de_vaccination_inscription_vaccins.pdf?1621543619',4185550149);
+
+INSERT INTO Public_Health_Facility (location_name, address,`type`, website, telephone)
+VALUES('CLSC Saint-Paul', '321 boulevard Bonne-Espérance', 'Clinic', 'https://cdn-contenu.quebec.ca/cdn-contenu/sante/documents/Problemes_de_sante/covid-19/centres_de_vaccination_inscription_vaccins.pdf?1621543620', 8195550179);
+
+INSERT INTO Public_Health_Facility (location_name, address ,`type` ,website ,telephone )
+VALUES('Site de vaccination de Blainville', '820 Boulevard Curé-Labelle', 'Special', 'https://cdn-contenu.quebec.ca/cdn-contenu/sante/documents/Problemes_de_sante/covid-19/centres_de_vaccination_inscription_vaccins.pdf?1621543621',8195550133);
+
+INSERT INTO Public_Health_Facility (location_name, address,`type`,website,telephone)
+VALUES('Les Basques', '145 rue de l''Aréna', 'Special','https://cdn-contenu.quebec.ca/cdn-contenu/sante/documents/Problemes_de_sante/covid-19/centres_de_vaccination_inscription_vaccins.pdf?1621543622',8195550185);
+
+INSERT INTO Public_Health_Facility (location_name, address, `type`, website, telephone)
+VALUES('Site de vaccination de Nicolet', '316 rue Frère Dominique', 'Hospital', 'https://cdn-contenu.quebec.ca/cdn-contenu/sante/documents/Problemes_de_sante/covid-19/centres_de_vaccination_inscription_vaccins.pdf?1621543623',4185550116);
+
+INSERT INTO Public_Health_Facility (location_name, address, `type`, website, telephone)
+VALUES ('Université de Montréal', '1375, avenue Thérèse-Lavoie-Roux', 'Special', 'https://cdn-contenu.quebec.ca/cdn-contenu/sante/documents/Problemes_de_sante/covid-19/centres_de_vaccination_inscription_vaccins.pdf?1621543624',8195550164);
+
+INSERT INTO Public_Health_Facility (location_name, address, `type`, website, telephone)
+VALUES('CMSSS de Fermont', '1, rue de l''Aquilon', 'Hospital', 'https://cdn-contenu.quebec.ca/cdn-contenu/sante/documents/Problemes_de_sante/covid-19/centres_de_vaccination_inscription_vaccins.pdf?1621543625',4385550141);
+
+INSERT INTO Public_Health_Facility (location_name, address, `type`, website, telephone)
+VALUES('CLSC de Motton Bay', 'Motton Bay', 'Clinic', 'https://cdn-contenu.quebec.ca/cdn-contenu/sante/documents/Problemes_de_sante/covid-19/centres_de_vaccination_inscription_vaccins.pdf?1621543626',8195550164);
+
+
+INSERT INTO Infection (medicare_no, date_of_infection)
+VALUES(40814003,'2021-05-31');
+
+INSERT INTO Infection (medicare_no, date_of_infection)
+VALUES(48112992,'2020-05-05');
+
+
+INSERT INTO Age_Group (group_num, status)
+VALUES (1, 'INACTIVE');
+
+INSERT INTO Age_Group (group_num, status)
+VALUES(2, 'INACTIVE');
+
+INSERT INTO Age_Group (group_num,status)
+VALUES(3, 'INACTIVE');
+
+INSERT INTO Age_Group (group_num, status)
+VALUES(4, 'INACTIVE');
+
+INSERT INTO Age_Group (group_num, status)
+VALUES (5, 'INACTIVE');
+
+INSERT INTO Age_Group (group_num, status)
+VALUES(6, 'INACTIVE');
+
+INSERT INTO Age_Group (group_num, status)
+VALUES(7, 'INACTIVE');
+
+INSERT INTO Age_Group (group_num, status)
+VALUES(8, 'INACTIVE');
+
+INSERT INTO Age_Group (group_num, status)
+VALUES(9, 'ACTIVE');
+
+INSERT INTO Age_Group (group_num, status)
+VALUES (10, 'INACTIVE');
        
