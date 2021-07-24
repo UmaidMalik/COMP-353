@@ -120,6 +120,8 @@ WHERE Vaccination.company = Vaccine.company
 GROUP BY Vaccination.company;
 
 
+
+
 -- v. Get details of all the people who got vaccinated with a 
 -- vaccination that is currently suspended (first-name, last-name,
 -- date of birth, email, phone, city, date of vaccination, vaccination
