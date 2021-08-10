@@ -6,7 +6,7 @@ $database = 'fjc353_1';
 
 try {
   $connection = new PDO("mysql:host=$server;dbname=$database;", $username,$password);
-} catch (PODException $e) {
+} catch (PDOException $e) {
   die('Connection Failed: ' . $e->getMessage());
 }
 ?>
