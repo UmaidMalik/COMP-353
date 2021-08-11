@@ -11,8 +11,7 @@ if(isset($_POST["medicare_no"])&&
   isset($_POST["citizenship"]) &&
   isset($_POST["email"]) &&
   isset($_POST["telephone_no"]) &&
-  isset($_POST["address"]) &&
-  isset($_POST["postal_code"]))
+  isset($_POST["address"]))
   {
     $statement = $connection->prepare("UPDATE fjc353_1.Person SET
                               first_name = :first_name,
@@ -21,8 +20,7 @@ if(isset($_POST["medicare_no"])&&
                               citizenship = :citizenship,
                               email = :email,
                               telephone_no = :telephone_no,
-                              address = :address,
-                              postal_code = :postal_code
+                              address = :address
                               WHERE medicare_no =:medicare_no;");
 
 
@@ -34,7 +32,6 @@ if(isset($_POST["medicare_no"])&&
     $statement->bindParam(':email', $_POST["email"]);
     $statement->bindParam(':telephone_no', $_POST["telephone_no"]);
     $statement->bindParam(':address', $_POST["address"]);
-    $statement->bindParam(':postal_code', $_POST["postal_code"]);
 
     if($statement->execute())
     {
@@ -72,8 +69,6 @@ if(isset($_POST["medicare_no"])&&
     <input type="tel" name="telephone_no" id="telephone_no" value="<?= $person["telephone_no"] ?>"> <br>
     <label for = "address">Address</label><br>
     <input type="text" name="address" id="address" value="<?= $person["address"] ?>"> <br>
-    <label for = "postal_code">Postal Code</label><br>
-    <input type="text" name="postal_code" id="postal_code" value="<?= $person["postal_code"] ?>"> <br>
     <button type="submit">Update</></button>
   </form>
   <a href= "./">Back to Person</a>

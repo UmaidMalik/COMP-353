@@ -23,6 +23,5 @@ $person = $satatement -> fetch(POD: :FETCH_ASSOC);
   <p>Email: <?= $person[email] ?></p>
   <p>Phone Number: <?= $person[telephone_no] ?></p>
   <p>Address: <?= $person[address] ?></p>
-  <p>Postal Code: <?= $person[postal_code] ?></p>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<?php require_once '../Database.php';
+<?php require_once '../database.php';
 
 if(isset($_POST["medicare_no"])&&
   isset($_POST["first_name"]) &&
@@ -7,25 +7,25 @@ if(isset($_POST["medicare_no"])&&
   isset($_POST["citizenship"]) &&
   isset($_POST["email"]) &&
   isset($_POST["telephone_no"]) &&
-  isset($_POST["address"]) &&
-  isset($_POST["postal_code"])){
-$person = $connection->prepare
-("INSERT INTO fjc353_1.Person (medicare_no, first_name, last_name, date_of_birth, citizenship, email, telephone_no, address, postal_code)
-VALUES (:medicare_no, :first_name, :last_name, :date_of_birth, :citizenship, :email, :telephone_no, :address, :postal_code)";);
+  isset($_POST["address"]))
+{
+    $person = $connection->prepare
+    ("INSERT INTO fjc353_1.Person (medicare_no, first_name, last_name, date_of_birth, citizenship, email, telephone_no, address, postal_code)
+    VALUES (:medicare_no, :first_name, :last_name, :date_of_birth, :citizenship, :email, :telephone_no, :address, :postal_code)";);
 
-$person->bindParam(':medicare_no', $_POST["medicare_no"]);
-$person->bindParam(':first_name', $_POST["first_name"]);
-$person->bindParam(':last_name', $_POST["last_name"]);
-$person->bindParam(':date_of_birth', $_POST["date_of_birth"]);
-$person->bindParam(':citizenship', $_POST["citizenship"]);
-$person->bindParam(':email', $_POST["email"]);
-$person->bindParam(':telephone_no', $_POST["telephone_no"]);
-$person->bindParam(':address', $_POST["address"]);
-$person->bindParam(':postal_code', $_POST["postal_code"]);
+    $person->bindParam(':medicare_no', $_POST["medicare_no"]);
+    $person->bindParam(':first_name', $_POST["first_name"]);
+    $person->bindParam(':last_name', $_POST["last_name"]);
+    $person->bindParam(':date_of_birth', $_POST["date_of_birth"]);
+    $person->bindParam(':citizenship', $_POST["citizenship"]);
+    $person->bindParam(':email', $_POST["email"]);
+    $person->bindParam(':telephone_no', $_POST["telephone_no"]);
+    $person->bindParam(':address', $_POST["address"]);
 
-if($person->execute())
-  header("Location: .");
+    if($person->execute())
+      header("Location: .");
 }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,8 +52,6 @@ if($person->execute())
     <input type="tel" name="telephone_no" id="telephone_no"> <br>
     <label for = "address">Address</label><br>
     <input type="text" name="address" id="address"> <br>
-    <label for = "postal_code">Postal Code</label><br>
-    <input type="text" name="postal_code" id="postal_code"> <br>
     <button type="submit">Add</></button>
   </form>
   <a href= "./">Back to Person</a>
