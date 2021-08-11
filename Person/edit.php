@@ -3,7 +3,7 @@
 $statement = $connection->prepare("SELECT * FROM fjc353_1.Person AS Person WHERE Person.medicare_no = :medicare_no");
 $statement->bindParam(":medicare_no", $_GET["medicare_no"]);
 $statement->execute();
-$person = $statement->fetch(PDO: :FETCH_ASSOC);
+$person = $statement->fetch(PDO::FETCH_ASSOC);
 if(isset($_POST["medicare_no"])&&
   isset($_POST["first_name"]) &&
   isset($_POST["last_name"]) &&
@@ -40,7 +40,7 @@ if($statement->execute()){
 }else{
   header("Location: ./edit.php?medicare_no=".$_POST["medicare_no"]);
 }
-
+?>
 
 <!DOCTYPE html>
 <html lang="en">
