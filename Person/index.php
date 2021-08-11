@@ -26,7 +26,6 @@ $statement->execute();
         <td>Email</td>
         <td>Phone Number</td>
         <td>Address</td>
-        <td>Postal Code</td>
         <td>Actions</td>
       </tr>
     </thead>
@@ -41,7 +40,6 @@ $statement->execute();
           <td><?= $row["email"] ?></td>
           <td><?= $row["telephone_no"] ?></td>
           <td><?= $row["address"] ?></td>
-          <td><?= $row["postal_code"] ?></td>
           <td>
             <a href="./delete.php?medicare_no=<?= $row["medicare_no"] ?>">Delete</a>
             <a href="./edit.php?medicare_no=<?= $row["medicare_no"] ?>">Edit</a>
@@ -51,7 +49,7 @@ $statement->execute();
     </tbody>
   </table>
   <a href="../">Back to Homepage</a>
-  <a href="./create/">create</a>
+  <a href="./create/">Add a person</a>
 
 </body>
 </html>
