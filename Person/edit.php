@@ -3,7 +3,7 @@
 $statement = $connection->prepare("SELECT * FROM fjc353_1.Person AS Person WHERE Person.medicare_no = :medicare_no");
 $statement->bindParam(":medicare_no", $_GET["medicare_no"]);
 $statement->execute();
-$person = $statement->fetch(PDO::FETCH_ASSOC);
+$person = $statement->fetch(PDO: :FETCH_ASSOC);
 if(isset($_POST["medicare_no"])&&
   isset($_POST["first_name"]) &&
   isset($_POST["last_name"]) &&
@@ -12,8 +12,9 @@ if(isset($_POST["medicare_no"])&&
   isset($_POST["email"]) &&
   isset($_POST["telephone_no"]) &&
   isset($_POST["address"]) &&
-  isset($_POST["postal_code"])){
-$statement = $connection->prepare("UPDATE fjc353_1.Person SET
+  isset($_POST["postal_code"]))
+  {
+    $statement = $connection->prepare("UPDATE fjc353_1.Person SET
                               first_name = :first_name,
                               last_name = :last_name,
                               date_of_birth = :date_of_birth,
@@ -25,22 +26,25 @@ $statement = $connection->prepare("UPDATE fjc353_1.Person SET
                               WHERE medicare_no =:medicare_no;");
 
 
-$statement->bindParam(':medicare_no', $_POST["medicare_no"]);
-$statement->bindParam(':first_name', $_POST["first_name"]);
-$statement->bindParam(':last_name', $_POST["last_name"]);
-$statement->bindParam(':date_of_birth', $_POST["date_of_birth"]);
-$statement->bindParam(':citizenship', $_POST["citizenship"]);
-$statement->bindParam(':email', $_POST["email"]);
-$statement->bindParam(':telephone_no', $_POST["telephone_no"]);
-$statement->bindParam(':address', $_POST["address"]);
-$statement->bindParam(':postal_code', $_POST["postal_code"]);
+    $statement->bindParam(':medicare_no', $_POST["medicare_no"]);
+    $statement->bindParam(':first_name', $_POST["first_name"]);
+    $statement->bindParam(':last_name', $_POST["last_name"]);
+    $statement->bindParam(':date_of_birth', $_POST["date_of_birth"]);
+    $statement->bindParam(':citizenship', $_POST["citizenship"]);
+    $statement->bindParam(':email', $_POST["email"]);
+    $statement->bindParam(':telephone_no', $_POST["telephone_no"]);
+    $statement->bindParam(':address', $_POST["address"]);
+    $statement->bindParam(':postal_code', $_POST["postal_code"]);
 
-if($statement->execute()){
-  header("Location: .");
-}else{
-  header("Location: ./edit.php?medicare_no=".$_POST["medicare_no"]);
-}
-?>
+    if($statement->execute())
+    {
+      header("Location: .");
+    }else
+    {
+      header("Location: ./edit.php?medicare_no=".$_POST["medicare_no"]);
+    }
+  }
+  ?>
 
 <!DOCTYPE html>
 <html lang="en">
