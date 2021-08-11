@@ -1,6 +1,6 @@
-<?php require_once '../Database.php'
+<?php require_once '../Database.php';
 
-$statement = $connection ->prepare('SELECT * FROM fjc353_1.Person AS Person')
+$statement = $connection ->prepare('SELECT * FROM fjc353_1.Person AS Person');
 $statement->execute();
 ?>
 <!DOCTYPE html>
@@ -30,7 +30,7 @@ $statement->execute();
       </tr>
     </thead>
     <tbody>
-      <?php while ($row = $statement->fetch(PDO: :FETCH_ASSOC, PDO: :FETCH_ORI_NEXT)) { ?>
+      <?php while ($row = $Person->fetch(PDO::FETCH_ASSOC, PDO::FETCH_ORI_NEXT)) { ?>
         <tr>
           <td><?= $row["medicare_no"] ?></td>
           <td><?= $row["first_name"] ?></td>

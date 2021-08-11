@@ -1,7 +1,7 @@
 <?php
 $server = 'localhost:3306';
 $username = 'fjc353_1';
-$password = 'GROUPONE';
+$password = 'groupone';
 $database = 'fjc353_1';
 
 try {
