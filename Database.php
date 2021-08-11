@@ -1,5 +1,5 @@
 <?php
-$server = 'localhost:3306';
+$server = 'fjc353.encs.concordia.ca';
 $username = 'fjc353_1';
 $password = 'groupone';
 $database = 'fjc353_1';
