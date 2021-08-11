@@ -17,15 +17,15 @@ $statement->execute();
   <table>
     <thead>
       <tr>
-        <td>Medicare Number</td>
         <td>Employee ID</td>
+        <td>Medicare Number</td>
       </tr>
     </thead>
     <tbody>
       <?php while ($row = $statement->fetch(PDO: :FETCH_ASSOC, PDO: :FETCH_ORI_NEXT)) { ?>
       <tr>
-        <td><?= $row["medicare_no"] ?></td>
         <td><?= $row["EID"] ?></td>
+        <td><?= $row["medicare_no"] ?></td>
         <td>
           <a href="./delete.php?EID=<?= $row["EID"] ?>">Delete</a>
           <a href="./edit.php?EID=<?= $row["EID"] ?>">Edit</a>
