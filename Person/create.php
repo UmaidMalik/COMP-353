@@ -52,7 +52,7 @@ if(isset($_POST["medicare_no"])&&
     <input type="tel" name="telephone_no" id="telephone_no"> <br>
     <label for = "address">Address</label><br>
     <input type="text" name="address" id="address"> <br>
-    <button type="submit">Add</></button>
+    <button type="submit">Add</button>
   </form>
   <a href= "./">Back to Person</a>
 
