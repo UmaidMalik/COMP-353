@@ -9,9 +9,8 @@ if(isset($_POST["medicare_no"])&&
   isset($_POST["telephone_no"]) &&
   isset($_POST["address"]))
 {
-    $person = $connection->prepare
-    ("INSERT INTO fjc353_1.Person (medicare_no, first_name, last_name, date_of_birth, citizenship, email, telephone_no, address, postal_code)
-    VALUES (:medicare_no, :first_name, :last_name, :date_of_birth, :citizenship, :email, :telephone_no, :address, :postal_code)";);
+    $person = $connection->prepare("INSERT INTO fjc353_1.Person (medicare_no, first_name, last_name, date_of_birth, citizenship, email, telephone_no, address)
+    VALUES (:medicare_no, :first_name, :last_name, :date_of_birth, :citizenship, :email, :telephone_no, :address);");
 
     $person->bindParam(':medicare_no', $_POST["medicare_no"]);
     $person->bindParam(':first_name', $_POST["first_name"]);
@@ -54,7 +53,7 @@ if(isset($_POST["medicare_no"])&&
     <input type="text" name="address" id="address"> <br>
     <button type="submit">Add</></button>
   </form>
-  <a href= "./">Back to Person</a>
+  <a href= "../">Back to Person</a>
 
 </body>
 </html>

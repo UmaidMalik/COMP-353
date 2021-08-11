@@ -49,7 +49,7 @@ $statement->execute();
     </tbody>
   </table>
   <a href="../">Back to Homepage</a>
-  <a href="./create/">Add a person</a>
+  <a href="./create.php/">Add a person</a>
 
 </body>
 </html>
