@@ -20,11 +20,13 @@ $statement->execute();
         </thead>
         <tbody>
             <?php while ($row = $statement->fetch(PDO::FETCH_ASSOC, PDO::FETCH_ORI_NEXT)) { ?>
-                <td><?= $row["type_of_infection"] ?></td>
-                <td>
-                    <a href="./delete.php?type_of_infection<?= $row["type_of_infection"] ?>">Delete</a>
-                    <a href="./edit.php?type_of_infection<?= $row["type_of_infection"] ?>">Edit</a>
-                </td>
+                <tr>
+                    <td><?= $row["type_of_infection"] ?></td>
+                    <td>
+                        <a href="./delete.php?type_of_infection<?= $row["type_of_infection"] ?>">Delete</a>
+                        <a href="./edit.php?type_of_infection<?= $row["type_of_infection"] ?>">Edit</a>
+                    </td>
+                </tr>
             <?php } ?>
         </tbody>
     </table>
