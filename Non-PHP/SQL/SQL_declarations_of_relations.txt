@@ -1,0 +1,121 @@
+CREATE TABLE Person(
+	medicare_no char(12) PRIMARY KEY,
+	first_name varchar(32),
+	last_name varchar(32),
+	date_of_birth date,
+	citizenship varchar(32),
+	email varchar(32),
+	telephone_no varchar(20),
+	address varchar(32),
+	postal_code varchar(7),
+	city varchar(20),
+	province varchar(20));
+	
+CREATE TABLE Person_Age_Group(
+	medicare_no char(12) PRIMARY KEY,
+	group_no int);
+	
+CREATE TABLE Canadian_Citizen(
+	medicare_no char(12) PRIMARY KEY,
+	SSN int UNIQUE NOT NULL);
+	
+CREATE TABLE Non_Canadian_Citizen(
+	medicare_no char(12) PRIMARY KEY,
+	passport_no int UNIQUE NOT NULL);
+	
+CREATE TABLE Infection(
+	type_of_infection varchar(12) PRIMARY KEY,
+	date_of_infection date);
+	
+CREATE TABLE Group_Age(
+	group_no int PRIMARY KEY,
+	status varchar(20));
+
+CREATE TABLE Vaccination(
+	medicare_no char(12),
+	`date` DATE,
+	PHW_medicare_no char(12),
+	PHF_name varchar(64),
+	company varchar(32),
+	dose_no int,
+	PRIMARY KEY(medicare_no, `date`),
+	FOREIGN KEY (medicare_no) REFERENCES Person(medicare_no));
+
+CREATE TABLE Vaccine(
+	company varchar(32) PRIMARY KEY,
+	status varchar(9),
+	suspension_date date,
+	approval_date date);
+	
+CREATE TABLE Public_Health_Facility(
+	name varchar(64) PRIMARY KEY,
+	city varchar(20),
+	province varchar(20),
+	postal_code varchar(7),
+	`type` varchar(32),
+	address varchar(64),
+	web_address varchar(225),
+);
+	
+CREATE TABLE Public_Health_Worker(
+	EID char(20) PRIMARY KEY,
+	medicare_no char(12));
+	
+CREATE TABLE Employment(
+	EID char(20),
+	PHF_name varchar(64),
+	start_date date,
+	end_date date, 
+	PRIMARY KEY(EID, PHF_name),
+	FOREIGN KEY(EID) REFERENCES Public_Health_Worker(EID),
+	FOREIGN KEY(PHF_name) REFERENCES Public_Health_Facility(name)
+);
+	
+CREATE TABLE Shipment(
+	company varchar(32),
+	PHF varchar(64),
+	date_of_shipment date,
+	`count` char(12),
+	PRIMARY KEY (company, PHF, date_of_shipment, `count`),
+	FOREIGN KEY(company) REFERENCES Vaccine(company),
+	FOREIGN KEY(PHF) REFERENCES Public_Health_Facility(name));
+	
+CREATE TABLE Managing(
+	EID varchar(20) PRIMARY KEY,
+	PHF varchar(64),
+	FOREIGN KEY(EID) REFERENCES Public_Health_Worker(EID),
+	FOREIGN KEY(PHF) REFERENCES Public_Health_Facility(name));
+	
+CREATE TABLE Transfer(
+	`from` varchar(64),
+	`to` varchar(64),
+	company varchar(32),
+	`count` int,
+	`date` date,
+	PRIMARY KEY(`from`, `to`, company, `count`, `date`),
+	FOREIGN KEY(`from`) REFERENCES Public_Health_Facility(name),
+	FOREIGN KEY(`to`) REFERENCES Public_Health_Facility(name),
+	FOREIGN KEY(company) REFERENCES Vaccine(company));
+	
+CREATE TABLE Inventory(
+	PHF varchar(64),
+	company varchar(32),
+	`count` int,
+	PRIMARY KEY(PHF, company),
+	FOREIGN KEY(PHF) REFERENCES Public_Health_Facility(name),
+	FOREIGN KEY(company) REFERENCES Vaccine(company));
+	
+CREATE TABLE Province_Age_Group(
+	province varchar(20) PRIMARY KEY,
+	group_no int,
+    FOREIGN KEY (group_no) REFERENCES Group_Age(group_no));
+    
+CREATE TABLE Province(province varchar(20) PRIMARY KEY);
+
+CREATE TABLE Postal_code(
+	postal_code varchar(7) PRIMARY KEY,
+	city varchar(20));
+	
+CREATE TABLE City(
+	city varchar(20) PRIMARY KEY,
+	province varchar(20));
