@@ -3,7 +3,7 @@
 $statement = $connection->prepare("SELECT * FROM fjc353_1.Province AS Province WHERE Province.province = :province");
 $statement->bindParam(":province", $_GET["province"]);
 $statement->execute();
-$province = $statement->fetch(PDO: :FETCH_ASSOC);
+$province = $statement->fetch(PDO::FETCH_ASSOC);
 if(isset($_POST["province"]))
   {
     $statement = $connection->prepare("UPDATE fjc353_1.Province SET
