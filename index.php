@@ -11,12 +11,12 @@
   <h1>Welcome!</h1>
   <p>Choose one of the following links:</p>
   <a href="./Person/">Person</a>
-  <a href="./Person/">Public Health Worker</a>
-  <a href="./Person/">Public Health Facility</a>
-  <a href="./Person/">Vaccine</a>
-  <a href="./Person/">Infection</a>
-  <a href="./Person/">Age Group</a>
-  <a href="./Person/">Province</a>
+  <a href="./PHW/">Public Health Worker</a>
+  <a href="./PHF/">Public Health Facility</a>
+  <a href="./Vaccine/">Vaccine</a>
+  <a href="./Infection/">Infection</a>
+  <a href="./Group_Age/">Age Group</a>
+  <a href="./Province/">Province</a>
 
 </body>
 </html>
