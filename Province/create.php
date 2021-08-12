@@ -2,9 +2,8 @@
 
 if(isset($_POST["province"]))
   {
-$province = $connection->prepare
-("INSERT INTO fjc353_1.Province (province)
-VALUES (:province)";);
+$province = $connection->prepare("INSERT INTO fjc353_1.Province (province) 
+                                  VALUES (:province);");
 
 $province->bindParam(':province', $_POST["province"]);
 
