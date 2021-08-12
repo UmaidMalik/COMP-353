@@ -12,7 +12,7 @@
   <p>Choose one of the following links:</p>
   <a href="./Person/">Person</a>
   <a href="./PHW/">Public Health Worker</a>
-  <a href="./PHF/">Public Health Facility</a>
+  <a href="./Public_Health_Facility/">Public Health Facility</a>
   <a href="./Vaccine/">Vaccine</a>
   <a href="./Infection/">Infection</a>
   <a href="./Group_Age/">Age Group</a>
