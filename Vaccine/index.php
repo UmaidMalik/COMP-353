@@ -1,6 +1,6 @@
-<?php require_once '../database.php'
+<?php require_once '../database.php';
 
-$statement = $connection ->prepare('SELECT * FROM fjc353_1.Vaccine AS Vaccine')
+$statement = $connection ->prepare('SELECT * FROM fjc353_1.Vaccine AS Vaccine');
 $statement->execute();
 ?>
 <!DOCTYPE html>
@@ -24,7 +24,7 @@ $statement->execute();
       </tr>
     </thead>
     <tbody>
-      <?php while ($row = $statement->fetch(PDO: :FETCH_ASSOC, PDO: :FETCH_ORI_NEXT)) { ?>
+      <?php while ($row = $statement->fetch(PDO::FETCH_ASSOC, PDO::FETCH_ORI_NEXT)) { ?>
       <tr>
         <td><?= $row["company"] ?></td>
         <td><?= $row["status"] ?></td>
