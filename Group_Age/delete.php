@@ -5,4 +5,5 @@ $statement->bindParam(":group_no", $_GET["group_no"]);
 $statement->execute();
 
 header("Location: .");
+
 ?>
