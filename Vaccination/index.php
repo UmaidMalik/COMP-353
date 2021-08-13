@@ -26,7 +26,7 @@ $statement->execute();
       </tr>
     </thead>
     <tbody>
-      <?php while ($row = $statement->fetch(PDO: :FETCH_ASSOC, PDO::FETCH_ORI_NEXT);) { ?>
+      <?php while ($row = $statement->fetch(PDO::FETCH_ASSOC, PDO::FETCH_ORI_NEXT);) { ?>
       <tr>
         <td><?= $row["medicare_no"] ?></td>
         <td><?= $row["date"] ?></td>
