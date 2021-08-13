@@ -1,6 +1,6 @@
 <?php require_once '../database.php';
 
-if(isset($_POST["groupe_no"])){
+if(isset($_POST["group_no"])){
     $group = $connection->prepare("INSERT INTO fjc353_1.Group_Age(group_no, min_age) VALUES (:group_no, :min_age);");
     
     $group->bindParam(':group_no', $_POST["group_no"]);
