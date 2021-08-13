@@ -9,7 +9,7 @@ if(isset($_POST["medicare_no"])&&
   isset($_POST["telephone_no"]) &&
   isset($_POST["address"])) {
     $person = $connection->prepare("INSERT INTO fjc353_1.Person (medicare_no, first_name, last_name, date_of_birth, citizenship, email, telephone_no, address)
-    VALUES (:medicare_no, :first_name, :last_name, date(:date_of_birth), :citizenship, :email, :telephone_no, :address);");
+    VALUES (:medicare_no, :first_name, :last_name, :date_of_birth, :citizenship, :email, :telephone_no, :address);");
 
     $person->bindParam(':medicare_no', $_POST["medicare_no"]);
     $person->bindParam(':first_name', $_POST["first_name"]);
