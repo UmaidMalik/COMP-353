@@ -35,7 +35,7 @@ $statement->execute();
   </tbody>
 </table>
   <a href="../">Back to Homepage</a>
-  <a href="./create/">Add a Public Health Worker</a>
+  <a href="./create.php/">Add a Public Health Worker</a>
 
 </body>
 </html>

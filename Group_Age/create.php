@@ -6,7 +6,7 @@ if(isset($_POST["groupe_no"])){
     $group->bindParam(':group_no', $_POST["group_no"]);
     $group->bindParam(':min_age', $_POST["min_age"]);
 
-    $group->exectue();
+    $group->execute();
 }
 ?>
 

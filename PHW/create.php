@@ -5,7 +5,7 @@ if(isset($_POST["EID"]) &&
   {
     $phw = $connection->prepare
     ("INSERT INTO fjc353_1.Public_Health_Worker (EID, medicare_no)
-    VALUES (:EID, :medicare_no)";);
+    VALUES (:EID, :medicare_no);");
 
     $phw->bindParam(':EID', $_POST["EID"]);
     $phw->bindParam(':medicare_no', $_POST["medicare_no"]);
